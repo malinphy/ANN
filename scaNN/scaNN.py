@@ -12,3 +12,8 @@ searcher = scann.scann_ops_pybind.builder(data, 8, "dot_product").tree(
 neighbors, distances = searcher.search_batched(query)
 print(neighbors)
 print(distances)
+
+
+query2 = np.random.rand(2,6)
+neighbors2, distance2 = searcher.search_batched(query2)
+print(neighbors2)
